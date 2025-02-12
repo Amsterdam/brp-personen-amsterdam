@@ -45,6 +45,8 @@ paths:
           required: true
         - $ref: "#/components/parameters/X_Task_Description"
           required: true
+        - $ref: "#/components/parameters/resultaatFormaat"
+          required: false
       requestBody:
         content:
           application/json; charset=utf-8:
@@ -2134,6 +2136,17 @@ components:
           \ een vrije tekst en hierover zullen afspraken vastleggen in de transparantiedocumentatie;\
           \ het is vooral een hulpmiddel om taken die binnen de applicatie worden uitgevoerd in het\
           \ kader van protocollering meteen al vast te leggen"
+    resultaatFormaat:
+      in: query
+      name: resultaat-formaat
+      schema:
+        type: string
+        description: 
+          "gewenst formaat van de response: volledig of standaard\
+          \ - volledig: zend alle attributen in de response waarop een autorisatie aanwezig is;\
+          \   lege attributen krijgen null als waarde\
+          \ - standaard: alleen die attributen komen terug waarop een autorisatie aanwezig is en\
+          \   waarop een waarde is toegekend"
   headers:
     warning:
       schema:
