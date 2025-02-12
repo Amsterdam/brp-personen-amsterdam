@@ -2138,7 +2138,7 @@ components:
           \ kader van protocollering meteen al vast te leggen"
     resultaatFormaat:
       in: query
-      name: resultaatFormaat
+      name: resultaat-formaat
       schema:
         type: string
         description: 
